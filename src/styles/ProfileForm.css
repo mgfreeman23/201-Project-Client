@@ -1,0 +1,63 @@
+body {
+    background-color: #8c1515;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-form-container {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.profile-form-container h2 {
+    text-align: center;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.profile-form input[type="text"],
+.profile-form input[type="number"] {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.profile-form input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.submit-button {
+    background-color: #8c1515;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #600909; /* Darker shade */
+  }
+
+  .hobbyContainer {
+    margin-top: 15px;
+  }
