@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../login.css">
+</head>
+<body>
+    
+    <p class="maintitle">Login</p>
+    <div class="login-form">
+        <p class="login-title">Enter your username and password</p>
+        <input type="text" id="uname" class="login-input" placeholder="Username">
+        <p class="login-error-message" id="wrong-u" name="error-message">Incorrect username</p>
+        <p class="login-error-message" id="missing-u" name="error-message">Enter username</p>
+        <input type="text" id="pword" class="login-input" placeholder="Password">
+        <p class="login-error-message" id="wrong-p" name="error-message">Incorrect password</p>
+        <p class="login-error-message" id="missing-p" name="error-message">Enter password</p>
+        <button type="submit" class="submitbutton" onclick="login()">Login</button>
+    </div>
+
+    <script src="../login.js"></script>
+</body>
+</html>
