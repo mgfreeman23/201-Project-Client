@@ -14,7 +14,7 @@ function getUserID(){
 function login(){
     // first clear all error messages if any
     let errors = document.getElementsByName("error-message");
-    for(i = 0; i < errors.length; i++){
+    for(let i = 0; i < errors.length; i++){
         errors[i].style.display="none";
     }
 
@@ -23,11 +23,11 @@ function login(){
     let _uname = document.getElementById("uname").value;
     let _pword = document.getElementById("pword").value;
 
-    if(_uname == null || _uname == ""){
+    if(_uname == null || _uname === ""){
         document.getElementById("missing-u").style.display="block";
         invalidInputs = true;
     }
-    if( _pword == null || _pword == ""){
+    if( _pword == null || _pword === ""){
         document.getElementById("missing-p").style.display="block";
         invalidInputs = true;
     }

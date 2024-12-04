@@ -8,7 +8,10 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    margin: 0;
 }
+
 
 .maintitle{
     color: rgb(193, 29, 29);
@@ -18,6 +21,7 @@ body{
 
 .login-form{
     margin: 0;
+    margin-left: 2rem; /* make the form look more centered with the nav bar */
     border: solid 1px black;
     border-radius: 10px;
     height: 450px;
