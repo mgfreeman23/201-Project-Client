@@ -5,6 +5,8 @@ import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
 
 import './App.css';
+import SettingsPage from './pages/Settings';
+import ChangePasswordPage from './pages/PasswordChange';
 
 function App() {
   return (
@@ -19,7 +21,10 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/createProfile" element={< CreateProfile />} />
+          <Route path="/settings" element={< SettingsPage />} />
+          <Route path="/settings/passwordChange" element={< ChangePasswordPage />} />
           <Route path="/Login" element={< Login />}></Route>
+
         </Routes>
       </div>
     </Router>
