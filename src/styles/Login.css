@@ -1,0 +1,86 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.maintitle{
+    color: rgb(193, 29, 29);
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+
+.login-form{
+    margin: 0;
+    margin-left: 2rem; /* make the form look more centered with the nav bar */
+    border: solid 1px black;
+    border-radius: 10px;
+    height: 450px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgb(193, 29, 29);
+}
+
+.login-title{
+    width: 310px;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
+
+.login-input{
+    width: 325px;
+    height: 30px;
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 7px;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 3px;
+    margin-top: 30px;
+}
+
+.login-input::placeholder{
+    color: gray;
+    font-size: 20px;
+}
+
+.login-error-message{
+    display: none;
+    padding: 0;
+    margin: 0;
+    width: 325px;
+    color: red;
+    font-style: italic;
+    font-size: 13px;
+}
+
+.submitbutton{
+    margin-top: 30px;
+    color: rgb(193, 29, 29);
+    background-color: white;
+    width: 75px;
+    height: 30px;
+    font-size: 20px;
+    border: solid 1px black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.submitbutton:hover{
+    background-color: rgb(193, 29, 29);
+    color: white;
+    
+}
