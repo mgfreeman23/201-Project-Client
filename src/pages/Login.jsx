@@ -68,12 +68,12 @@ const Login = () => {
     <div className="login-form">
         <p className="login-title">Enter your username and password</p>
 
-        <input type="text" id="uname" className="login-input" placeholder="Username"/>
+        <input type="text" id="uname" className="login-input" placeholder="Username" value={username} onChange= {(e) => setUsername(e.target.value)}/>
 
         <p className="login-error-message" id="wrong-u" name="error-message">Incorrect username</p>
         <p className="login-error-message" id="missing-u" name="error-message">Enter username</p>
 
-        <input type="text" id="pword" className="login-input" placeholder="Password"/>
+        <input type="text" id="pword" className="login-input" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
         <p className="login-error-message" id="wrong-p" name="error-message">Incorrect password</p>
         <p className="login-error-message" id="missing-p" name="error-message">Enter password</p>
 
