@@ -5,8 +5,10 @@ import HomePage from "./pages/HomePage";
 import Explore from "./pages/Explore";
 import Login from "./pages/Login";
 import './App.css';
+import SignUpPage from './pages/Registration';
 import SettingsPage from './pages/Settings';
 import ChangePasswordPage from './pages/PasswordChange';
+
 
 function App() {
   // use react states to check if user is logged in
@@ -41,6 +43,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/createProfile" element={< CreateProfile />} />
+          <Route path="/signup" element={< SignUpPage />} />
           <Route path="/explore" element={< Explore />} />
           <Route path="/settings" element={< SettingsPage />} />
           <Route path="/settings/passwordChange" element={< ChangePasswordPage />} />
