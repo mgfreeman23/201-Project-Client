@@ -1,6 +1,7 @@
 import React from 'react';
 import "../styles/HobbyStyle.css"
 
+// list of hobby options
 const HobbiesMultiSelect = ({ selectedHobbies, onChange }) => {
   const availableHobbies = ['Art', 'Baseball', 'Baking', 'Basketball', 'Cooking',
     'Crochet', 'Dancing', 'Hiking', 'Ice Skating', 'Martial Arts', 'Running', 'Soccer',
@@ -16,6 +17,7 @@ const HobbiesMultiSelect = ({ selectedHobbies, onChange }) => {
     }
   };
 
+  // html element to render
   return (
     <div>
       <label>Select Hobbies:</label>
