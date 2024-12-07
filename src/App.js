@@ -13,10 +13,10 @@ import ChangePasswordPage from './pages/PasswordChange';
 function App() {
   // use react states to check if user is logged in
   const [loggedIn, setLoggedIn] = useState(false);
-
+  
   useEffect(() => {
     const userId = localStorage.getItem('uid');
-    setLoggedIn(!!userId);
+    setLoggedIn(!!userId); // double negation to convert value to its true or false equivalent
   }, []);
 
   return (
@@ -35,7 +35,7 @@ function App() {
           ) : (
             <>
               <Link to="/Login">Login</Link> | 
-              <Link to="/register">Registration</Link>
+              <Link to="/signup">Registration</Link>
             </>
           )}
         </nav>

@@ -8,7 +8,7 @@ const HobbiesMultiSelect = ({ selectedHobbies, onChange }) => {
     'Video Games', 'Singing', 'Photography', 'Programming', 'Writing', 'Languages', 
     'Reading', 'Movies', 'Scrapbooking', 'Puzzles', 'Shopping', 'Swimming'
   ];
-
+ // add (or remove, if toggled to unchecked) hobby from the list of selected hobbies
   const toggleHobby = (hobby) => {
     if (selectedHobbies.includes(hobby)) {
       onChange(selectedHobbies.filter((h) => h !== hobby));

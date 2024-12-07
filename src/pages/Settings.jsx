@@ -27,7 +27,7 @@ const SettingsPage = () => {
     }
 
     const logout = () => {
-        localStorage.removeItem("userid");
+        localStorage.removeItem("uid");
         window.location.href = "/";
     }
 
@@ -42,7 +42,7 @@ const SettingsPage = () => {
             });
             var data = await response.json();
             if (data.success) {
-                localStorage.removeItem("userid");
+                localStorage.removeItem("uid");
                 window.location.href = "/";
             } else {
                 setDeleteError("Unable to delete account at this time, please try again later");

@@ -3,6 +3,8 @@ import usersData from '../files/users1.json';
 import "../styles/Explore.css";
 import { useLinkClickHandler } from 'react-router-dom';
 
+// review this page -> if a user is logged in, grab ordered list of matching users from database 
+// if no user is logged in OR no profile data entered, just return the data of registered users in database
 const Explore = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [users, setUsers] = useState([]);

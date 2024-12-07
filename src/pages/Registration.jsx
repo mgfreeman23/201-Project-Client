@@ -80,7 +80,8 @@ const SignUpPage = () => {
                 var data = await response.json();
                 if (response.ok) {
                     alert("Account created successfully!");
-                    localStorage.setItem("uid", data);
+                    // convert user id to string because local storage only stores strings
+                    localStorage.setItem("uid", data.toString());
                     window.location.href = "/";
                 } else {
                     alert("Error: " + data);
