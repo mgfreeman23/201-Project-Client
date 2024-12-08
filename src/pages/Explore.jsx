@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import usersData from '../files/users1.json';
 import "../styles/Explore.css";
 import { useLinkClickHandler } from 'react-router-dom';
 
@@ -11,7 +10,10 @@ const Explore = () => {
   const [liked, setLiked] = useState(false);
 
   useEffect(() => {
-    setUsers(usersData);
+    fetch('/CSCI201-Final-Project-Server/explore')
+      .then(response => response.json())
+      .then(data => setUsers(data))
+      .catch(error => console.error('Error fetching data:', error));
   }, []);
 
   const nextSlide = () => {
@@ -43,19 +45,19 @@ const Explore = () => {
       {users.length > 0 
       && (
         <div className="match">
-
           <h3>{users[currentIndex].username}</h3>
           <p>Email: {users[currentIndex].emailAddress}</p>
           <p>Age: {users[currentIndex].age}</p>
           <p>Major: {users[currentIndex].major}</p>
           <p>Hometown: {users[currentIndex].hometown}</p>
           <p>Hobbies: {users[currentIndex].hobbies.join(', ')}</p>
-          <p>Social Media Links:</p>
-          <ul>
-            {users[currentIndex].socialMediaLinks.map((link) => (
-              <li> <a href={link}> {link} </a> </li>
-            ))}
-          </ul>
+
+          <button
+            onClick={() => window.open(`https://instagram.com/${users[currentIndex].instagram}`, '_blank')}
+            id="instagram-button"
+          >
+            Instagram
+          </button>
 
           <button 
           onClick={like} 
@@ -67,7 +69,6 @@ const Explore = () => {
           >	&#10084;
           </button>
           
-
         </div>
       )
       }

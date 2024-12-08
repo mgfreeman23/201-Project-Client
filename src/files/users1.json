@@ -1,46 +1,72 @@
 [
     {
-        "userID": 1,
-        "emailAddress": "john.doe@example.com",
-        "username": "john_doe",
-        "password": "securepassword123",
-        "age": 21,
-        "major": "Computer Science",
-        "hometown": "San Francisco",
-        "hobbies": ["coding", "gaming", "reading"],
-        "socialMediaLinks": ["https://twitter.com/john_doe", "https://instagram.com/john_doe"]
+      "userID": 1,
+      "emailAddress": "user1@example.com",
+      "username": "user1",
+      "password": "none",
+      "age": 20,
+      "major": "Computer Science",
+      "hometown": "City1",
+      "hobbies": [
+        "Reading",
+        "Traveling"
+      ],
+      "instagram": "insta_user1"
     },
     {
-        "userID": 2,
-        "emailAddress": "jane.smith@example.com",
-        "username": "jane_smith",
-        "password": "mypassword456",
-        "age": 22,
-        "major": "Biology",
-        "hometown": "Los Angeles",
-        "hobbies": ["hiking", "painting", "traveling"],
-        "socialMediaLinks": ["https://twitter.com/jane_smith", "https://facebook.com/jane_smith"]
+      "userID": 2,
+      "emailAddress": "user2@example.com",
+      "username": "user2",
+      "password": "none",
+      "age": 21,
+      "major": "Biology",
+      "hometown": "City2",
+      "hobbies": [
+        "Cooking",
+        "Hiking"
+      ],
+      "instagram": "insta_user2"
     },
     {
-        "userID": 3,
-        "emailAddress": "alex.jones@example.com",
-        "username": "alex_jones",
-        "password": "mypassword789",
-        "age": 20,
-        "major": "Physics",
-        "hometown": "Chicago",
-        "hobbies": ["astronomy", "music", "photography"],
-        "socialMediaLinks": ["https://twitter.com/alex_jones", "https://linkedin.com/in/alex_jones"]
+      "userID": 3,
+      "emailAddress": "user3@example.com",
+      "username": "user3",
+      "password": "none",
+      "age": 22,
+      "major": "Physics",
+      "hometown": "City3",
+      "hobbies": [
+        "Traveling",
+        "Swimming"
+      ],
+      "instagram": "insta_user3"
     },
     {
-        "userID": 4,
-        "emailAddress": "lisa.white@example.com",
-        "username": "lisa_white",
-        "password": "password987",
-        "age": 23,
-        "major": "Psychology",
-        "hometown": "New York",
-        "hobbies": ["yoga", "writing", "cooking"],
-        "socialMediaLinks": ["https://instagram.com/lisa_white", "https://facebook.com/lisa.white"]
+      "userID": 4,
+      "emailAddress": "user4@example.com",
+      "username": "user4",
+      "password": "none",
+      "age": 23,
+      "major": "Chemistry",
+      "hometown": "City4",
+      "hobbies": [
+        "Reading",
+        "Gaming"
+      ],
+      "instagram": "insta_user4"
+    },
+    {
+      "userID": 5,
+      "emailAddress": "user5@example.com",
+      "username": "user5",
+      "password": "none",
+      "age": 24,
+      "major": "Mathematics",
+      "hometown": "City5",
+      "hobbies": [
+        "Hiking",
+        "Swimming"
+      ],
+      "instagram": "insta_user5"
     }
-]
+  ]
