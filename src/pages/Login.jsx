@@ -50,39 +50,40 @@ const Login = () => {
       .then((response) => response.text())
       .then((text) => {
         // if valid user
-        if (parseInt(text, 10) > 0) {
+        if (text > 0) {
           // Valid login, update session and redirect
+          console.log(text);
           setUserSession(text);
           window.location.href = "/";
-        } else if (text === "-1") {
+        } else if (text === -1) {
           // Wrong password
           document.getElementById("wrong-p").style.display="block";
-        } else if (text === "-2") {
+        } else if (text === -2) {
           // Invalid username
           document.getElementById("wrong-u").style.display="block";
         }
       });
   };
 
-  const forgotPassword = () => {
-    document.getElementById("loginform").style.display="none";
-    document.getElementById("recoverform").style.display="flex";
-  };
+  // const forgotPassword = () => {
+  //   document.getElementById("loginform").style.display="none";
+  //   document.getElementById("recoverform").style.display="flex";
+  // };
 
-  const retrievePassword = async (e) => {
-    document.getElementById("loginform").style.display="flex";
-    document.getElementById("recoverform").style.display="none";
-    console.log(recover);
-    var response = await fetch(baseurl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ "email": recover}),
-    });
+  // const retrievePassword = async (e) => {
+  //   document.getElementById("loginform").style.display="flex";
+  //   document.getElementById("recoverform").style.display="none";
+  //   console.log(recover);
+  //   var response = await fetch(baseurl, {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({ "email": recover}),
+  //   });
 
-    console.log(response.json());
-  };
+  //   console.log(response.json());
+  // };
 
   return (
     <div>
@@ -100,13 +101,13 @@ const Login = () => {
         <p className="login-error-message" id="missing-p" name="error-message">Enter password</p>
 
         <button type="submit" className="submitbutton" onClick={handleLogin}>Login</button>
-        <button className="submitbutton extra-bottom"  onClick={forgotPassword}>Forgot Password</button>
+        {/* <button className="submitbutton extra-bottom"  onClick={forgotPassword}>Forgot Password</button> */}
     </div>
-    <div className="recover-form" id="recoverform">
+    {/* <div className="recover-form" id="recoverform">
       <p className="login-title">Enter the email associated with your account.</p>
       <input type="text" id="email" className="login-input" placeholder="Enter email" value={recover} onChange= {(e) => setRecover(e.target.value)}/>
       <button type="submit" className="submitbutton" onClick={retrievePassword}>Submit</button>
-    </div>
+    </div> */}
 
 </div>
   );
