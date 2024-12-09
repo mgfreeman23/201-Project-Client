@@ -41,10 +41,11 @@ const Login = () => {
     }
 
     // Make call to servlet and receive status
-    const url = new URL("LoginServlet", baseurl);
-    console.log(baseurl);
-    const params = { uname: username, pass: password };
-    url.search = new URLSearchParams(params).toString();
+    /*const url = new URL("LoginServlet", baseurl);
+    console.log(baseurl);*/
+    const params = new URLSearchParams({ uname: username, pass: password });
+    const url = `/CSCI201-Final-Project-Server/LoginServlet?${params.toString()}`;
+
 
     fetch(url)
       .then((response) => response.text())
