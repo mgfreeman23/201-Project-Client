@@ -10,7 +10,14 @@ const Explore = () => {
   const [liked, setLiked] = useState(false);
 
   useEffect(() => {
-    fetch('/CSCI201-Final-Project-Server/explore')
+    var uid = localStorage.getItem("uid");
+    var url;
+    if (uid) {
+      url = '/CSCI201-Final-Project-Server/explore?uid='+uid;
+    } else {
+      url = '/CSCI201-Final-Project-Server/explore';
+    }
+    fetch(url)
       .then(response => response.json())
       .then(data => setUsers(data))
       .catch(error => console.error('Error fetching data:', error));
