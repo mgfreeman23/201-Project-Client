@@ -70,7 +70,7 @@ const SignUpPage = () => {
         e.preventDefault();
         if (validateForm()) {
             try {
-                var response = await fetch("http://localhost:8080/CSCI201-Final-Project-Server/register", {
+                var response = await fetch("/CSCI201-Final-Project-Server/register", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
