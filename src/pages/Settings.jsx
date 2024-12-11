@@ -81,11 +81,11 @@ const Settings = () => {
 				headers: {
 					"Content-Type": "application/json"
 				},
-				body: JSON.stringify({ newPassword: newPassword }),
+				body: JSON.stringify({ newPassword }),
 			});
 
 			const data = await response.json();
-			if (data.success) {
+			if (response.ok) {
 				alert("Password updated successfully!");
 			} else {
 				alert(`Failed to update password: ${data.message}`);
@@ -120,7 +120,7 @@ const Settings = () => {
 				const response = await fetch("/CSCI201-Final-Project-Server/DeleteAccountServlet", { method: "POST" });
 				const data = await response.json();
 				
-				if (data.success) {
+				if (reponse.ok) {
 					alert("Account deleted successfully.");
 					window.location.href = "/";
 				} else {
